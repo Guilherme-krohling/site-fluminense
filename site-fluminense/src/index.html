@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet">
+    <title>Fluminense</title>
+</head>
+<body class="bg-flu-grena text-white flex flex-col min-h-screen">
+    <header class="bg-flu-grena flex justify-between items-center p-4 shadow-md text-white">
+        <div class="flex items-center gap-4">
+            <a href="index.html">
+                <img src="../assets/images/fluminense-logo.png" alt="Escudo do Fluminense" width="100">
+            </a>
+            <h1 class="text-xl font-bold">Meu Fluminense</h1>
+
+            <svg class="md:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" id="btn-mobile">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>        
+        </div>
+        <nav class="hidden md:flex gap-4">
+            <!--fonte-bold=NEGRITO uppercase=CAPSLOCK  -->
+            <!--hover:text-flu-dourado= deixar o mouse em cima e fica na cor dourada definida no config tailwind -->
+             <!--transition-colors= é uma classe utilitária que habilita transições suaves para propriedades relacionadas a core -->
+            <a href="index.html" class="font-bold uppercase hover:text-flu-dourado transition-colors">Home</a> 
+            <a href="historia.html" class="font-bold uppercase hover:text-flu-dourado transition-colors">Historia</a> 
+            <a href="titulos.html" class="font-bold uppercase hover:text-flu-dourado transition-colors">Titulos</a> 
+            <a href="guerreiros.html" class="font-bold uppercase hover:text-flu-dourado transition-colors">Guerreiros</a> 
+            <a href="#" class="font-bold uppercase hover:text-flu-dourado transition-colors">Minha trajetoria</a> 
+            <a href="#" class="font-bold uppercase hover:text-flu-dourado transition-colors">Sobre</a> 
+        </nav>
+    </header>
+    <div class="bg-flu-grena hidden flex-col gap-4 p-4 w-full md:hidden border-t border-flu-dourado" id="menu-mobile">
+        <a href="index.html" class="font-bold uppercase hover:text-flu-dourado transition-colors">Home</a> 
+        <a href="historia.html" class="font-bold uppercase hover:text-flu-dourado transition-colors">Historia</a> 
+        <a href="titulos.html" class="font-bold uppercase hover:text-flu-dourado transition-colors">Titulos</a> 
+        <a href="guerreiros.html" class="font-bold uppercase hover:text-flu-dourado transition-colors">Guerreiros</a> 
+        <a href="#" class="font-bold uppercase hover:text-flu-dourado transition-colors">Minha trajetoria</a> 
+        <a href="#" class="font-bold uppercase hover:text-flu-dourado transition-colors">Sobre</a> 
+    </div>
+    <h1 class="text-3xl font-bold underline">
+        Fluminense Football Club
+    </h1>
+    <button class="bg-flu-grena text-white font-bold py-2 px-4 rounded hover:bg-flu-verde transition duration-300">
+        Teste Tricolor
+    </button>
+
+
+    <!-- CORPO SO SITE -->
+    <main class="flex-1 container mx-auto p-6 space-y-12">
+        <section class="relative h-[500px] bg-flu-verde flex items-center justify-center">
+            <img src="../assets/images/torcida.jpg" alt="" class="absolute inset-0 opacity-50 w-full h-full object-cover">
+            <div class="text-center z-10">
+                <h2 class="text-5xl font-bold text-white mb-4">A Historia</h2>
+                <p class="text-xl text-gray-200 mb-8">Clube tantas vezes campeão</p>
+                
+                <button class="bg-white text-flu-verde font-bold py-3 px-8 rounded-full hover:bg-gray-200 transition">
+                    Começar a jornada
+                </button>
+            </div>
+        </section>
+
+        <section>
+            <!--Crie um grid de 3 colunas com um buraco (gap) de tamanho 8 entre elas-->
+            <div class="container mx-auto py-12 px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="titulos.html">
+                    <div class="bg-gray-300 text-flu-grena shadow-lg rounded-lg p-6 text-center hover:-translate-y-2 hover:shadow-2xl transition duration-300 cursor-pointer">
+                        <h3 class="text-xl font-bold mb-2">Titulos</h3>
+                        <p class="text-flu-verde text-sm">Conheça nossas glórias</p>
+                    </div>
+                </a>
+
+                <a href="guerreiros.html">
+
+                    <div class="bg-gray-300 text-flu-grena shadow-lg rounded-lg p-6 text-center hover:-translate-y-2 hover:shadow-2xl transition duration-300 cursor-pointer">
+                        <h3 class="text-xl font-bold mb-2">Guerreiros</h3>
+                        <p class="text-flu-verde text-sm">Porque time de guerreiros ?</p>
+                    </div>
+                </a>
+
+                <a href="historia.html">
+                    <div class="bg-gray-300 text-flu-grena shadow-lg rounded-lg p-6 text-center hover:-translate-y-2 hover:shadow-2xl transition duration-300 cursor-pointer">
+                        <h3 class="text-xl font-bold mb-2">Trajetória</h3>
+                        <p class="text-flu-verde text-sm">Conheça a historia desde 1902</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-flu-verde flex justify-center">
+        <h1>Fluminense Football Club - Projeto de Fã</h1>
+    </footer>
+
+    <script>
+        // 1. Pegar o botão pelo ID
+        const btnMobile = document.getElementById('btn-mobile');
+
+        // 2. Pegar o menu escondido pelo ID
+        const menuMobile = document.getElementById('menu-mobile');
+
+        // 3. Adicionar a função de clique
+        btnMobile.addEventListener('click', function() {
+            // A função 'toggle' funciona como um interruptor:
+            // Se tiver a classe 'hidden', ele tira (mostra o menu).
+            // Se NÃO tiver a classe 'hidden', ele coloca (esconde o menu).
+            menuMobile.classList.toggle('hidden');
+            
+            // Opcional: Adicionar classe para alinhar verticalmente quando abrir
+            menuMobile.classList.toggle('flex');
+        });    
+    </script>
+</body>
+</html>

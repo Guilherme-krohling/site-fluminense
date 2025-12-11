@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@theme {
+  --color-flu-grena: #8a1126;
+  --color-flu-verde: #006f4e;
+  --color-flu-dourado: #c5a059;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet">
+    <title>Guerreiros</title>
+</head>
+<body class="bg-flu-grena text-white flex flex-col min-h-screen">
+    <header class="bg-flu-grena flex justify-between items-center p-4 shadow-md text-white">
+        <div class="flex items-center gap-4">
+            <a href="index.html">
+                <img src="../assets/images/fluminense-logo.png" alt="Escudo do Fluminense" width="100">
+            </a>
+            <h1 class="text-xl font-bold">Meu Fluminense</h1>
+        </div>
+        <nav class="hidden md:flex gap-4">
+            <!--fonte-bold=NEGRITO uppercase=CAPSLOCK  -->
+            <!--hover:text-flu-dourado= deixar o mouse em cima e fica na cor dourada definida no config tailwind -->
+                <!--transition-colors= é uma classe utilitária que habilita transições suaves para propriedades relacionadas a core -->
+            <a href="index.html" class="font-bold uppercase hover:text-flu-dourado transition-colors">Home</a> 
+            <a href="historia.html" class="font-bold uppercase hover:text-flu-dourado transition-colors">Historia</a> 
+            <a href="titulos.html" class="font-bold uppercase hover:text-flu-dourado transition-colors">Titulos</a> 
+            <a href="guerreiros.html" class="font-bold uppercase hover:text-flu-dourado transition-colors">Guerreiros</a> 
+            <a href="#" class="font-bold uppercase hover:text-flu-dourado transition-colors">Minha trajetoria</a> 
+            <a href="#" class="font-bold uppercase hover:text-flu-dourado transition-colors">Sobre</a> 
+        </nav>
+    </header>
+    <main class="flex-1 container mx-auto p-6 space-y-12">
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-3xl text-flu-dourado font-bold mb-4">1902: A fundação</h2>
+                <p class="text-white leading-relaxed">Primeiro escudo do fluminense tinha as cores Cinza e Branco</p>
+            </div>
+
+            <div>
+                <img src="../assets/images/logo_antigo.png" alt="Logo cinza e branca" width="100">
+            </div>
+        </section>
+        <hr class="border-t-4 border-flu-dourado">
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            
+            <div>
+                <img src="../assets/images/Oscar_Cox.jpg" alt="Fundador do time" width="100">
+            </div>
+            <div>
+                <h2 class="text-3xl text-flu-dourado font-bold mb-4">Oscar Cox - O Visionário</h2>
+                <p class="text-white leading-relaxed">Filho de pai inglês, Oscar Cox trouxe da Europa não apenas a paixão pelo esporte, mas a visão de criar algo eterno. 
+                    Em 21 de julho de 1902, ele liderou a reunião histórica na Rua Marquês de Abrantes que fundou o Fluminense, 
+                    introduzindo o futebol de forma organizada no Rio de Janeiro. O pioneirismo está no nosso DNA.
+                </p>
+            </div>
+        </section>
+
+        <hr class="border-t-4 border-flu-dourado">
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-3xl text-flu-dourado font-bold mb-4">Maquina Tricolor</h2>
+                <p class="text-white leading-relaxed">
+                    Nos anos 70, o Fluminense montou um dos maiores esquadrões da história do futebol mundial. 
+                    Liderados pelo ídolo Rivelino, a 'Máquina' encantou o Brasil com um futebol ofensivo e envolvente, 
+                    conquistando o Bicampeonato Carioca de 1975/76 e deixando saudade em quem ama o bom futebol.
+                </p>
+            </div>
+
+            <div>
+                <img src="../assets/images/maquina_tricolor.jpeg" alt="Logo cinza e branca" width="300">
+            </div>
+        </section>
+        <hr class="border-t-4 border-flu-dourado">
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            
+            <div>
+                <img src="../assets/images/cano_libertadores.jpg" alt="Fundador do time" width="200">
+            </div>
+            <div>
+                <h2 class="text-3xl text-flu-dourado font-bold mb-4">2023: A Glória Eterna</h2>
+                <p class="text-white leading-relaxed">
+                    O dia 4 de novembro de 2023 ficará marcado para sempre. Em um Maracanã pulsante, o Fluminense superou o Boca Juniors com gols de Cano e John Kennedy. 
+                    O grito que estava preso na garganta finalmente ecoou: Campeão da América. O destino foi cumprido.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-flu-verde flex justify-center">
+        <h1 class="items-center">Fluminense Football Club - Projeto de Fã</h1>
+    </footer>
+</body>
+</html>
