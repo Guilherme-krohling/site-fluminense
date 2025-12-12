@@ -1,65 +1,73 @@
-import Link from "next/link";
-import Image from "next/image"; // O Next tem um componente de imagem otimizado
+import Link from 'next/link';
+import { CapaHome } from '@/components/CapaHome'; // <-- Importando com o nome novo
+import { History, Ticket, Users, Building2, Trophy, Shirt, ArrowRight } from 'lucide-react';
+
+// Configuração dos Cards (Menu de Navegação)
+const sections = [
+  { title: 'História', description: 'Conheça a trajetória do Tricolor desde 1902', href: '/historia', icon: History, color: 'from-flu-verde to-flu-verde/60' },
+  { title: 'Meus Jogos', description: 'Momentos que vivi no estádio', href: '/meus-jogos', icon: Ticket, color: 'from-flu-grena to-flu-grena/60' },
+  { title: 'Escalações', description: 'Times históricos e artilheiros', href: '/escalacoes', icon: Users, color: 'from-flu-verde to-flu-verde/60' },
+  { title: 'Estádios', description: 'Laranjeiras e Maracanã', href: '/estadios', icon: Building2, color: 'from-flu-dourado to-flu-dourado/60' },
+  { title: 'Troféus', description: 'Nossa galeria de conquistas', href: '/trofeus', icon: Trophy, color: 'from-flu-verde to-flu-verde/60' },
+  { title: 'Uniformes', description: 'A evolução do manto tricolor', href: '/uniformes', icon: Shirt, color: 'from-flu-grena to-flu-grena/60' },
+];
 
 export default function Home() {
   return (
-    <main className="flex-1 flex flex-col min-h-screen">
+    <main className="min-h-screen bg-gray-50">
       
-      {/* SEÇÃO HERO (FOTO DA TORCIDA) */}
-      <section className="relative h-[500px] bg-flu-verde flex items-center justify-center">
-        {/* No Next, imagens de fundo precisam de um jeito especial, mas vamos usar 
-            o jeito simples (img tag) primeiro para não complicar, depois otimizamos */}
-        <img 
-          src="/images/torcida.jpg" // Certifique-se que copiou a foto com esse nome para a pasta public
-          alt="Torcida do Fluminense" 
-          className="absolute inset-0 opacity-30 w-full h-full object-cover"
-        />
-        
-        <div className="text-center z-10 relative px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-md">
-            A História
-          </h2>
-          <p className="text-lg md:text-xl text-gray-200 mb-8 drop-shadow-md">
-            Clube tantas vezes campeão
-          </p>
+      {/* 1. Capa do Site (Antigo Hero) */}
+      <CapaHome />
+      
+      {/* 2. Grid de Navegação (Cards) */}
+      <section className="py-20 bg-linear-to-b from-white via-gray-100 to-white">
+        <div className="container mx-auto px-4">
           
-          <Link 
-            href="/historia" 
-            className="bg-white text-flu-verde font-bold py-3 px-8 rounded-full hover:bg-gray-200 transition shadow-lg"
-          >
-            Começar a jornada
-          </Link>
-        </div>
-      </section>
+          {/* Título da Seção */}
+          <div className="text-center mb-12">
+            <p className="text-sm uppercase tracking-[0.3em] text-flu-verde font-bold mb-2">
+              Explore
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+              Navegue pela <span className="text-flu-grena">História</span>
+            </h2>
+          </div>
 
-      {/* SEÇÃO GRID DE NAVEGAÇÃO */}
-      <section className="bg-flu-grena py-12">
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            {/* CARD 1 */}
-            <Link href="/titulos">
-                <div className="bg-gray-200 text-flu-grena shadow-lg rounded-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition duration-300 cursor-pointer h-full flex flex-col justify-center">
-                    <h3 className="text-xl font-bold mb-2">Títulos</h3>
-                    <p className="text-flu-verde text-sm">Conheça nossas glórias</p>
-                </div>
-            </Link>
+          {/* Grid de Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {sections.map((section, index) => {
+              const Icon = section.icon;
+              return (
+                <Link
+                  key={section.href}
+                  href={section.href}
+                  className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:border-flu-verde/50 hover:shadow-xl hover:-translate-y-1 block"
+                >
+                  {/* Gradiente sutil no fundo ao passar o mouse */}
+                  <div className={`absolute inset-0 bg-linear-to-br ${section.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
+                  
+                  {/* Ícone Colorido */}
+                  <div className={`w-14 h-14 rounded-xl bg-linear-to-br ${section.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 text-white shadow-md`}>
+                    <Icon className="w-7 h-7" />
+                  </div>
 
-            {/* CARD 2 */}
-            <Link href="/guerreiros">
-                <div className="bg-gray-200 text-flu-grena shadow-lg rounded-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition duration-300 cursor-pointer h-full flex flex-col justify-center">
-                    <h3 className="text-xl font-bold mb-2">Guerreiros</h3>
-                    <p className="text-flu-verde text-sm">Por que time de guerreiros?</p>
-                </div>
-            </Link>
+                  {/* Textos */}
+                  <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-flu-verde transition-colors">
+                    {section.title}
+                  </h3>
+                  <p className="text-gray-500 text-sm mb-4">
+                    {section.description}
+                  </p>
 
-            {/* CARD 3 */}
-            <Link href="/historia">
-                <div className="bg-gray-200 text-flu-grena shadow-lg rounded-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition duration-300 cursor-pointer h-full flex flex-col justify-center">
-                    <h3 className="text-xl font-bold mb-2">Trajetória</h3>
-                    <p className="text-flu-verde text-sm">Conheça a história desde 1902</p>
-                </div>
-            </Link>
-
+                  {/* Link com Seta */}
+                  <div className="flex items-center text-flu-grena text-sm font-bold">
+                    <span>Explorar</span>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" />
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </section>
     </main>
