@@ -1,15 +1,17 @@
 import Link from 'next/link';
 import { CapaHome } from '@/components/CapaHome'; // <-- Importando com o nome novo
-import { History, Ticket, Users, Building2, Trophy, Shirt, ArrowRight } from 'lucide-react';
+import { History, Ticket, Users, Building2, Trophy, Shirt, ArrowRight, Book, House, Music, Newspaper, CircleStar } from 'lucide-react';
 
 // Configuração dos Cards (Menu de Navegação)
 const sections = [
-  { title: 'História', description: 'Conheça a trajetória do Tricolor desde 1902', href: '/historia', icon: History, color: 'from-flu-verde to-flu-verde/60' },
+  { title: 'História', description: 'Conheça a trajetória do Tricolor desde 1902', href: '/historia', icon: Book, color: 'from-flu-verde to-flu-verde/60' },
   { title: 'Meus Jogos', description: 'Momentos que vivi no estádio', href: '/meus-jogos', icon: Ticket, color: 'from-flu-grena to-flu-grena/60' },
   { title: 'Escalações', description: 'Times históricos e artilheiros', href: '/escalacoes', icon: Users, color: 'from-flu-verde to-flu-verde/60' },
-  { title: 'Estádios', description: 'Laranjeiras e Maracanã', href: '/estadios', icon: Building2, color: 'from-flu-dourado to-flu-dourado/60' },
-  { title: 'Troféus', description: 'Nossa galeria de conquistas', href: '/trofeus', icon: Trophy, color: 'from-flu-verde to-flu-verde/60' },
-  { title: 'Uniformes', description: 'A evolução do manto tricolor', href: '/uniformes', icon: Shirt, color: 'from-flu-grena to-flu-grena/60' },
+  { title: 'Estádios', description: 'Laranjeiras e Maracanã', href: '/estadios', icon: House, color: 'from-flu-dourado to-flu-dourado/60' },
+  { title: 'Títulos', description: 'Nossa galeria de conquistas', href: '/titulos', icon: Trophy, color: 'from-flu-grena to-flu-grena/60' },
+  { title: 'Uniformes', description: 'A evolução da armadura tricolor', href: '/uniformes', icon: Shirt, color: 'from-flu-verde to-flu-verde/60' },
+  { title: 'Musicas', description: 'Escute todas as musicas e cantos da torcida', href: '/musicas', icon: Music, color: 'from-flu-dourado to-flu-dourado/60' },
+  { title: 'Ídolos', description: 'Tela mostrando os maiores idolos do Flu', href: '/idolos', icon: CircleStar, color: 'from-flu-grena to-flu-grena/60' },
 ];
 
 export default function Home() {
@@ -34,7 +36,7 @@ export default function Home() {
           </div>
 
           {/* Grid de Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {sections.map((section, index) => {
               const Icon = section.icon;
               return (

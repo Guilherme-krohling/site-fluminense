@@ -15,11 +15,11 @@ export const CapaHome = () => {
     <section className="relative h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden">
       {/* Imagem de Fundo (Capa) */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-95"
         style={{ backgroundImage: `url('/images/torcida.jpg')` }} 
       >
         {/* Degradê (Filtro por cima da foto) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-flu-verde/80 via-black/40 to-flu-grena/90" />
+        <div className="absolute inset-0 bg-linear-to-b from-flu-verde/80 via-black/40 to-flu-grena/90" />
       </div>
 
       {/* Conteúdo Central (Texto) */}
@@ -40,7 +40,7 @@ export const CapaHome = () => {
           </span>
         </h1>
 
-        <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto mb-8 animate-slide-up animation-delay-200 drop-shadow-md">
+        <p className="text-lg md:text-xl text-gray-100 font-bold max-w-2xl mx-auto mb-8 animate-slide-up animation-delay-200 drop-shadow-md">
           Uma jornada de amor, memórias e paixão pelo Tricolor das Laranjeiras.
           Desde 1902, fazendo história.
         </p>
@@ -48,18 +48,18 @@ export const CapaHome = () => {
         {/* Pílulas de Títulos (Efeito de Vidro) */}
         <div className="flex flex-wrap gap-4 justify-center animate-slide-up animation-delay-300">
           <div className="glass-card px-6 py-3 rounded-full">
-            <span className="text-white">
-              <strong className="text-flu-dourado">4x</strong> Campeão Brasileiro
+            <span className="text-white font-bold">
+              <strong className="text-flu-dourado ">4x</strong> Campeão Brasileiro
             </span>
           </div>
           <div className="glass-card px-6 py-3 rounded-full">
-            <span className="text-white">
+            <span className="text-white font-bold">
               <strong className="text-flu-dourado">1x</strong> Libertadores
             </span>
           </div>
           <div className="glass-card px-6 py-3 rounded-full">
-            <span className="text-white">
-              <strong className="text-flu-dourado">33x</strong> Carioca
+            <span className="text-white font-bold">
+              <strong className="text-flu-dourado">33x</strong> Cariocas
             </span>
           </div>
         </div>

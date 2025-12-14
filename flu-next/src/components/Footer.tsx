@@ -27,10 +27,10 @@ export function Footer() {
           <div className="flex flex-col items-center text-center max-w-md mx-auto md:mx-0">
             <p className="text-gray-300 text-sm italic font-serif">
               "O Fluminense é o único time Tricolor do mundo, o resto são só times de três cores."
-            </p>
-            <span className="text-gray-500 text-xs uppercase tracking-wider mt-1 mb-2">
+              <span className="text-gray-500 text-xs uppercase tracking-wider mt-1 mb-2 ml-3">
               - Nelson Rodrigues
-            </span>
+              </span>
+            </p>
           </div>
 
           {/* Link Externo (Correção da cor azul com !) */}

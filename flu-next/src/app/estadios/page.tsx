@@ -1,5 +1,5 @@
 import { MapPin, Users, Calendar, Heart } from 'lucide-react';
-import { ImageCarousel } from '@/components/ImagensCarrossel'; // <-- Importamos nossa ferramenta nova
+import ImageCarousel  from '@/components/ImagensCarrossel'; // <-- Importamos nossa ferramenta nova
 
 // --- DEFINIÇÃO DAS IMAGENS ---
 // Garanta que esses arquivos existem na pasta public/images
