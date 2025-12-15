@@ -71,20 +71,20 @@ export const idolosData = [
     biografia: "Motorzinho do time de Diniz. Incansável, habilidoso e decisivo. Arias se tornou pilar fundamental nas maiores conquistas recentes do Fluminense.",
     inMemoriam: false
   },
+  // {
+  //   id: 7,
+  //   nome: "John Kennedy",
+  //   apelido: "O Menino Rei",
+  //   posicao: "Atacante",
+  //   imagem: "/images/jk.jpg",
+  //   jogos: 80,
+  //   gols: 20,
+  //   titulos: ["Libertadores (2023)", "Recopa (2024)"],
+  //   biografia: "Predestinado. O autor do gol do título da Libertadores. O Moleque de Xerém que entrou para a história com o chute mais importante dos mais de 120 anos do clube.",
+  //   inMemoriam: false
+  // },
   {
     id: 7,
-    nome: "John Kennedy",
-    apelido: "O Menino Rei",
-    posicao: "Atacante",
-    imagem: "/images/jk.jpg",
-    jogos: 80,
-    gols: 20,
-    titulos: ["Libertadores (2023)", "Recopa (2024)"],
-    biografia: "Predestinado. O autor do gol do título da Libertadores. O Moleque de Xerém que entrou para a história com o chute mais importante dos mais de 120 anos do clube.",
-    inMemoriam: false
-  },
-  {
-    id: 8,
     nome: "Fábio",
     apelido: "O Gigante da América",
     posicao: "Goleiro",
@@ -96,7 +96,7 @@ export const idolosData = [
     inMemoriam: false
   },
   {
-    id: 9,
+    id: 8,
     nome: "Paulo Henrique Ganso",
     apelido: "O Maestro",
     posicao: "Meia",

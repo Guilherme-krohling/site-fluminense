@@ -9,7 +9,6 @@ const sections = [
   { title: 'Escalações', description: 'Times históricos e artilheiros', href: '/escalacoes', icon: Users, color: 'from-flu-verde to-flu-verde/60' },
   { title: 'Estádios', description: 'Laranjeiras e Maracanã', href: '/estadios', icon: House, color: 'from-flu-dourado to-flu-dourado/60' },
   { title: 'Títulos', description: 'Nossa galeria de conquistas', href: '/titulos', icon: Trophy, color: 'from-flu-grena to-flu-grena/60' },
-  { title: 'Uniformes', description: 'A evolução da armadura tricolor', href: '/uniformes', icon: Shirt, color: 'from-flu-verde to-flu-verde/60' },
   { title: 'Musicas', description: 'Escute todas as musicas e cantos da torcida', href: '/musicas', icon: Music, color: 'from-flu-dourado to-flu-dourado/60' },
   { title: 'Ídolos', description: 'Tela mostrando os maiores idolos do Flu', href: '/idolos', icon: CircleStar, color: 'from-flu-grena to-flu-grena/60' },
 ];

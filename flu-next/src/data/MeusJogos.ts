@@ -47,7 +47,7 @@ export const meusJogosData = [
     id: 5,
     data: "10/01/2024",
     adversario: "O sol, estava muito quente",
-    campeonato: "Nenhum - visita",
+    campeonato: "Visita",
     estadio: "Maracanã",
     placar: "-",
     resultado: "-", // Opções: "Vitoria", "Empate", "Derrota"
@@ -58,7 +58,7 @@ export const meusJogosData = [
     id: 6,
     data: "10/01/2024",
     adversario: "O sol, estava muito quente",
-    campeonato: "Nenhum - visita",
+    campeonato: "Visita",
     estadio: "Laranjeiras",
     placar: "-",
     resultado: "-", // Opções: "Vitoria", "Empate", "Derrota"

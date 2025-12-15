@@ -114,7 +114,7 @@ export default function MeusJogosPage() {
                         <span className="text-xs font-bold text-gray-400 uppercase tracking-wide flex items-center gap-1">
                           <Calendar size={12} /> {jogo.data}
                         </span>
-                        <h3 className="font-bold text-[#0b1f3f] text-lg">{jogo.adversario}</h3>
+                        <h3 className="font-bold text-[#0b1f3f] text-lg">Adversário: {jogo.adversario}</h3>
                       </div>
                       <div className="text-right">
                         <span className="block text-2xl font-black text-[#9E0D2C]">{jogo.placar}</span>

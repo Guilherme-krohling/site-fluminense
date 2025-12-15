@@ -1,12 +1,20 @@
 // import { Trophy, Star, Award, Medal } from 'lucide-react';
 
 import { Trofeus } from '@/components/Trofeus'
+import { GloriasEternas } from '@/components/GloriasEternas'
+import { GaleriaCarioca } from '@/components/GaleriaCarioca'
 
 export default function titulos() {
 return (
-    // pt-20 para compensar o menu fixo, caso precise
     <main className="min-h-screen pt-5 bg-gray-50">
+      {/* 1. Cabeçalho e contadores */}
       <Trofeus />
+
+      {/* 2. Lista detalhada (com videos e textos) */}
+      <GloriasEternas />
+
+      {/* 3. Grid Estaduais */}
+      <GaleriaCarioca />
     </main>
   );   
 }

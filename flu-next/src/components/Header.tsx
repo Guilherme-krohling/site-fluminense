@@ -12,7 +12,6 @@ const navItems = [
   { label: 'Escalações', href: '/escalacoes' },
   { label: 'Estádios', href: '/estadios' },
   { label: 'Títulos', href: '/titulos' },
-  { label: 'Uniformes', href: '/uniformes' },
   { label: 'Músicas', href: '/musicas' },
   { label: 'Ídolos', href: '/idolos' },
 ];

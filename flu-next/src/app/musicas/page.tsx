@@ -71,7 +71,7 @@ export default function MusicasPage() {
                   {/* ALTERADO: song.title -> song.titulo */}
                   <span className="font-bold text-gray-800 truncate text-lg">{song.titulo}</span>
                   <span className="text-xs text-gray-400 uppercase tracking-wide font-medium">
-                    {playingId === song.id ? 'Tocando agora...' : 'Toque para ouvir'}
+                    {playingId === song.id ? 'Tocando agora...' : ''}
                   </span>
                 </div>
               </div>
